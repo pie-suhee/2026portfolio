@@ -1,0 +1,27 @@
+.grid-li > li::before,
+.grid-li > li::after {
+    content: "";
+    display: block;
+    width: 200vw;
+    height: 1px;
+    background-color: #f3f4f6;
+    position: absolute;
+    left: -100vw;
+    z-index: 100;
+}
+
+.grid-li > li::before { top: 0; }
+.grid-li > li::after  { bottom: 0; }
+
+@media (max-width: 767px) {
+    .grid-li > li:not(:nth-child(2n+1))::before,
+    .grid-li > li:not(:nth-child(2n+1))::after { display: none; }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+    .grid-li > li:not(:nth-child(3n+1))::before,
+    .grid-li > li:not(:nth-child(3n+1))::after { display: none; }
+}
+@media (min-width: 1280px) {
+    .grid-li > li:not(:nth-child(4n+1))::before,
+    .grid-li > li:not(:nth-child(4n+1))::after { display: none; }
+}

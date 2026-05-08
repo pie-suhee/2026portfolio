@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suhee Portfolio</title>
+    <!-- favicon -->
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <!-- Geist 영문 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Pretendard 한글 폰트 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script/tailwindConfig.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" defer></script>
+
+    <script src="./script/page-controller.js" defer></script>
+</head>
+<body class="max-w-screen overflow-x-hidden">
+    <header class="sticky top-0 flex h-14 items-center justify-between gap-8 px-4 sm:px-6 bg-white/30 backdrop-blur-xl border-b border-[#f3f4f6] z-[10000]">
+        <a href="/" class="flex items-center gap-4">
+            <svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.4795 0C32.5461 1.71575e-05 33.0791 0.32724 33.0791 0.981445V31.0186C33.0791 31.6728 32.5461 32 31.4795 32C30.4129 32 29.8799 31.6728 29.8799 31.0186V17.749H29.8594V16.0352H22.3594V25.5625C22.3592 27.6266 21.5249 29.2154 19.8564 30.3291C18.2403 31.4257 15.9076 31.9811 12.8594 31.998V32H8.85938V31.9932C8.71036 31.9967 8.55916 32 8.40625 32C5.72804 32 3.65745 31.4318 2.19434 30.2959C0.731206 29.1323 0 27.5115 0 25.4336V23.6055C0 22.9683 0.495443 22.6495 1.4873 22.6494C2.47928 22.6494 2.97559 22.9682 2.97559 23.6055V25.8496C2.97567 26.8745 3.44653 27.678 4.38867 28.2598C5.3558 28.8138 6.69522 29.0908 8.40625 29.0908C10.1668 29.0908 11.5432 28.8137 12.5352 28.2598C13.527 27.678 14.0234 26.8746 14.0234 25.8496V21.1533C14.0234 20.3222 13.726 19.6845 13.1309 19.2412C12.5356 18.7703 11.3942 18.3277 9.70801 17.9121L6.39746 17.0801C4.86008 16.6922 3.65697 16.2353 2.78906 15.709C1.94605 15.1549 1.35105 14.4067 1.00391 13.4648C0.681557 12.5229 0.520534 11.2902 0.520508 9.7666V6.56641C0.520508 4.4331 1.21479 2.81233 2.60352 1.7041C3.99228 0.568171 5.98883 0 8.59277 0C11.1965 3.83048e-05 13.18 0.568292 14.5439 1.7041C15.9327 2.81233 16.6279 4.43307 16.6279 6.56641V8.39453C16.6279 9.03174 16.1316 9.35057 15.1396 9.35059C14.1477 9.35059 13.6514 9.03176 13.6514 8.39453V6.15039C13.6512 3.98958 11.9652 2.90924 8.59277 2.90918C6.93121 2.90918 5.66583 3.18612 4.79785 3.74023C3.9301 4.2943 3.49616 5.0978 3.49609 6.15039V9.68359C3.49614 11.1517 3.69505 12.177 4.0918 12.7588C4.48863 13.3403 5.25717 13.7832 6.39746 14.0879L11.2334 15.2939C12.7214 15.6541 13.875 16.0966 14.6934 16.623C15.5365 17.1217 16.1313 17.7594 16.4785 18.5352C16.8257 19.3108 17 20.2942 17 21.4854V25.4336C17 26.7387 16.7003 27.8632 16.1035 28.8076C16.6112 28.6836 17.055 28.5262 17.4346 28.333C18.5288 27.7898 19.0761 27.0019 19.0762 25.9697V16.0352H15.2471C15.076 15.9023 14.892 15.7757 14.6934 15.6582C13.875 15.1318 12.7213 14.6893 11.2334 14.3291L9.85938 13.9863L6.85938 13.2373V4H9.85938V13.0352H19.0762V0.9375C19.0762 0.312738 19.6236 2.68817e-05 20.7178 0C21.8121 0 22.3594 0.312711 22.3594 0.9375V13.0352H29.8799V0.981445C29.8799 0.327243 30.4129 1.95037e-05 31.4795 0ZM9.70898 18.7168C9.75997 18.7294 9.81037 18.7423 9.86035 18.7549V27.8047H6.86035V18L9.70898 18.7168Z" fill="#0EA5E9"/>
+            </svg>
+            <span class="font-eng text-xl font-medium">SuheePortfolio</span>
+        </a>
+
+        <section class="flex items-center gap-4">
+            <a aria-label="GitHub repository" class="sm:hidden" href="https://github.com/pie-suhee" target="_blank">
+                <svg viewBox="0 0 20 20" class="size-6"><path d="M10 0C4.475 0 0 4.475 0 10a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.287-.6-1.175-1.025-1.412-.35-.188-.85-.65-.013-.663.788-.013 1.35.725 1.538 1.025.9 1.512 2.337 1.087 2.912.825.088-.65.35-1.088.638-1.338-2.225-.25-4.55-1.112-4.55-4.937 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.274.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0020 10c0-5.525-4.475-10-10-10z"></path></svg>
+            </a>
+
+            <button id="menu-btn" class="flex items-center sm:hidden">
+                <svg id="icon-open" viewBox="0 0 16 16" fill="currentColor" class="size-4"><path d="M8 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM8 6.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM9.5 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"></path></svg>
+                <svg id="icon-close" viewBox="0 0 16 16" fill="currentColor" class="size-4 hidden"><path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z"></path></svg>
+            </button>
+    
+    
+            <nav class="sm:flex max-sm:hidden gap-4" aria-label="데스크탑 메뉴">
+                <a href="#project" class="font-eng">project</a>
+                <a href="#skill" class="font-eng">skill</a>
+                <!-- <a href="#about" class="font-eng">about</a> -->
+            </nav>
+
+            <a aria-label="GitHub repository" class="max-sm:hidden" href="https://github.com/pie-suhee" target="_blank">
+                <svg viewBox="0 0 20 20" class="size-6"><path d="M10 0C4.475 0 0 4.475 0 10a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.287-.6-1.175-1.025-1.412-.35-.188-.85-.65-.013-.663.788-.013 1.35.725 1.538 1.025.9 1.512 2.337 1.087 2.912.825.088-.65.35-1.088.638-1.338-2.225-.25-4.55-1.112-4.55-4.937 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.274.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0020 10c0-5.525-4.475-10-10-10z"></path></svg>
+            </a>
+        </section>
+    </header>
+
+    <nav id="mobile-menu" class="fixed flex sm:hidden flex-col items-center gap-2 [&>*]:block p-4 bg-white/30 backdrop-blur-xl border border-[#f3f4f6] rounded-lg top-16 right-2 z-[10000]" aria-label="모바일 메뉴">
+        <a href="#project" class="font-eng">project</a>
+        <a href="#skill" class="font-eng">skill</a>
+        <!-- <a href="#about" class="font-eng">about</a> -->
+    </nav>
+
+    <main class="flex flex-col items-center overflow-x-hidden">
+        <section class="grid grid-cols-main-layout w-full max-w-[1600px]">
+            <div class="bg-grid-pattern bg-grid-size border-l border-r border-[#f3f4f6]"></div>
+
+            <section>
+                <section>
+                    <div class="relative flex h-16 items-end max-sm:px-4 sm:h-24">
+                        <span class="px-2 font-eng text-base text-black/20 break-keep">
+                            <span class="font-eng">Web Publisher / Front-End</span> 임수희
+                        </span>
+                    </div>
+                    <div class="relative max-sm:px-4 before:content-[''] before:block before:w-screen before:h-px before:bg-[#f3f4f6] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 after:content-[''] after:block after:w-screen after:h-px after:bg-[#f3f4f6] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+                        <h1 class="p-2 font-eng text-3xl tracking-tighter text-balance max-lg:font-medium sm:text-4xl lg:text-5xl break-keep">
+                            <span class="text-sky-500">Just a developer</span> obsessed with<br>simple code and smooth layouts.
+                        </h1>
+                    </div>
+                    <div class="relative flex flex-wrap items-end max-sm:px-4 sm:h-10">
+                        <span class="px-2 font-eng text-sm text-black/40 break-keep">HTML5 / CSS3</span>
+                        <span class="px-2 font-eng text-sm text-black/40 break-keep">JavaScript</span>
+                        <span class="px-2 font-eng text-sm text-black/40 break-keep">React</span>
+                        <span class="px-2 font-eng text-sm text-black/40 break-keep">Tailwind CSS</span>
+                        <span class="px-2 text-sm text-black/40 break-keep">반응형 <span class="font-eng">UI</span></span>
+                        <span class="px-2 text-sm text-black/40 break-keep"><span class="font-eng">CSS</span> 애니메이션</span>
+                    </div>
+                    <div class="relative max-sm:px-4 before:content-[''] before:block before:w-screen before:h-px before:bg-[#f3f4f6] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 after:content-[''] after:block after:w-screen after:h-px after:bg-[#f3f4f6] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+                        <h2 class="p-2 break-keep">
+                            <span class="font-eng">HTML</span>과 <span class="font-eng">CSS</span>로 화면을 구조부터 설계합니다.<br class="max-sm:hidden">
+                            반응형 <span class="font-eng">UI, CSS</span> 애니메이션, 크로스브라우징까지 보이는 것 너머의 완성도를 고민합니다.
+                        </h2>
+                    </div>
+                    <div class="relative flex h-16 items-end max-sm:px-4 sm:h-24"></div>
+                </section>
+
+                <section class="relative block lg:flex lg:items-stretch lg:[&>*]:flex-1 before:content-[''] before:block before:w-screen before:h-px before:bg-[#f3f4f6] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 after:content-[''] after:block after:w-screen after:h-px after:bg-[#f3f4f6] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+                    <section class="relative after:content-[''] after:block after:w-screen after:h-px after:bg-[#f3f4f6] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+                        <div>
+                            <div class="relative bg-gray-950/5 p-2 lg:col-span-2 lg:-mx-px dark:bg-white/10 overflow-hidden">
+                                <div class="rounded-xl bg-gray-950">
+                                    <div class="rounded-xl p-1 text-sm scheme-dark dark:inset-ring dark:inset-ring-white/10">
+                                        <div class="flex gap-2 p-2">
+                                            <span class="size-3 rounded-full bg-white/20"></span>
+                                            <span class="size-3 rounded-full bg-white/20"></span>
+                                            <span class="size-3 rounded-full bg-white/20"></span>
+                                        </div>
+                                    </div>
+                                    <div class="with-line-numbers text-[13px]/6 *:*:p-3!">
+                                        <div class="[&>*]:flex [&>*>*]:max-w-none [&>*>*]:shrink-0 [&>*>*]:grow [&>*]:overflow-auto [&>*]:rounded-lg [&>*]:!bg-white/10 [&>*]:p-5 dark:[&>*]:!bg-white/5 [**_.line]:isolate [**_.line]:block [**_.line:not(:last-child)]:min-h-[1lh] [&>*]:shadow-inset-ring-white/10 dark:[&>*]:shadow-inset-ring-white/5">
+                                            <div class="text-[13px]/6">
+                                                <code class="[&>*]:pl-5">
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">1</div>
+                                                        <div class="flex [&>*]:shrink-0 [&>*]:font-semibold">
+                                                            <span class="text-code-green">// 핵심 역량 프로필</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">2</div>
+                                                        <div class="flex [&>*]:shrink-0 [&>*]:font-mono [&>*]:font-semibold">
+                                                            <span class="text-code-dblue">const</span>
+                                                            <span class="text-code-blue">&nbsp;Suhee&nbsp;</span>
+                                                            <span class="text-white">=</span>
+                                                            <span class="text-code-yellow">&nbsp;&#123;</span> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">3</div>
+                                                        <div class="flex [&>*]:shrink-0 pl-4 [&>*]:font-mono [&>*]:font-semibold">
+                                                            <span class="text-code-lblue">name:</span>
+                                                            <span class="text-code-brown">&nbsp;"임수희"</span>
+                                                            <span class="text-white">,</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">4</div>
+                                                        <div class="flex [&>*]:shrink-0 pl-4 [&>*]:font-mono [&>*]:font-semibold">
+                                                            <span class="text-code-lblue">strengths:</span>
+                                                            <span class="text-code-pink">&nbsp;&#91;</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">5</div>
+                                                        <div class="flex [&>*]:shrink-0 pl-8 [&>*]:font-mono [&>*]:font-semibold">
+                                                            <span class="text-code-brown">"무한_습득_능력"</span>
+                                                            <span class="text-white">,</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">6</div>
+                                                        <div class="flex [&>*]:shrink-0 pl-8 [&>*]:font-mono [&>*]:font-semibold">
+                                                            <span class="text-code-brown">"디테일한_레이아웃"</span>
+                                                            <span class="text-white">,</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">7</div>
+                                                        <div class="flex [&>*]:shrink-0 pl-8 [&>*]:font-mono [&>*]:font-semibold">
+                                                            <span class="text-code-brown">"문제_해결_집착"</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">8</div>
+                                                        <div class="flex [&>*]:shrink-0 pl-4 [&>*]:font-mono [&>*]:font-semibold">
+                                                            <span class="text-code-pink">&#93;</span>
+                                                            <span class="text-white">,</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">9</div>
+                                                        <div class="flex [&>*]:shrink-0 pl-4 [&>*]:font-mono [&>*]:font-semibold">
+                                                            <span class="text-code-lyellow">isReadyToWork</span>
+                                                            <span class="text-code-pink">&nbsp;&#40;&#41;&nbsp;&#123;</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">10</div>
+                                                        <div class="flex [&>*]:shrink-0 pl-8 [&>*]:font-mono [&>*]:font-semibold">
+                                                            <span class="text-code-pink">return</span>
+                                                            <span class="text-code-dblue">&nbsp;this</span>
+                                                            <span class="text-white">.</span>
+                                                            <span class="text-code-lblue">strengths</span>
+                                                            <span class="text-white">.</span>
+                                                            <span class="text-code-lblue">length</span>
+                                                            <span class="text-white">&nbsp;&#62;&nbsp;</span>
+                                                            <span class="text-code-lgreen">0</span>
+                                                            <span class="text-white">;</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">11</div>
+                                                        <div class="flex [&>*]:shrink-0 pl-4 [&>*]:font-mono [&>*]:font-semibold">
+                                                            <span class="text-code-pink">&#125;</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">12</div>
+                                                        <div class="flex [&>*]:shrink-0 [&>*]:font-mono [&>*]:font-semibold">
+                                                            <span class="text-code-yellow">&#125;</span>
+                                                            <span class="text-white">;</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">13</div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">14</div>
+                                                        <div class="flex [&>*]:shrink-0 [&>*]:font-semibold">
+                                                            <span class="text-code-green">// 실행 결과:</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-4">
+                                                        <div class="w-[10px] flex justify-end text-white/50 font-bold">15</div>
+                                                        <div class="flex [&>*]:shrink-0 [&>*]:font-semibold">
+                                                            <span class="text-code-lblue">console</span>
+                                                            <span class="text-white">.</span>
+                                                            <span class="text-code-lyellow">log</span>
+                                                            <span class="text-code-yellow">&nbsp;&#40;</span>
+                                                            <span class="text-code-brown">"함께 성장할 준비가 되었습니다!"</span>
+                                                            <span class="text-code-yellow">&#41;</span>
+                                                            <span class="text-white">;</span>
+                                                        </div>
+                                                    </div>
+                                                </code>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="draggable-item absolute top-[-40px] max-sm:top-[-40px] left-[86%] max-sm:left-[65%] w-20 h-20 cursor-grab active:cursor-grabbing">
+                                    <img src="./img/html5.svg" alt="Html5" class="w-full h-full object-contain pointer-events-none">
+                                </div>
+
+                                <div class="draggable-item absolute top-0 max-sm:top-[-40px] left-[66%] max-sm:left-0 w-20 h-20 cursor-grab active:cursor-grabbing">
+                                    <img src="./img/tailwindcss.svg" alt="Tailwindcss" class="w-full h-full object-contain pointer-events-none">
+                                </div>
+
+                                <div class="draggable-item absolute top-[100px] left-[56%] max-sm:left-[10px] w-20 h-20 cursor-grab active:cursor-grabbing">
+                                    <img src="./img/react.svg" alt="react" class="w-full h-full object-contain pointer-events-none">
+                                </div>
+
+                                <div class="draggable-item absolute top-[100px] max-sm:top-[20px] left-[75%] w-20 h-20 cursor-grab active:cursor-grabbing">
+                                    <img src="./img/css3.svg" alt="Css3" class="w-full h-full object-contain pointer-events-none">
+                                </div>
+
+                                <div class="draggable-item absolute top-[230px] max-sm:top-[250px] left-[60%] max-sm:left-[55%] w-20 h-20 cursor-grab active:cursor-grabbing">
+                                    <img src="./img/javascript.svg" alt="javascript" class="w-full h-full object-contain pointer-events-none">
+                                </div>
+
+                                <div class="draggable-item absolute top-[200px] max-sm:top-[130px] left-[85%] max-sm:left-[74%] w-20 h-20 cursor-grab active:cursor-grabbing">
+                                    <img src="./img/git.svg" alt="git" class="w-full h-full object-contain pointer-events-none">
+                                </div>
+
+                                <div class="draggable-item absolute top-[290px] max-sm:top-[270px] left-[76%] max-sm:left-[-9px] w-20 h-20 cursor-grab active:cursor-grabbing">
+                                    <img src="./img/figma.svg" alt="figma" class="w-full h-full object-contain pointer-events-none">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- <section class="max-lg:h-[450px] bg-grid-pattern bg-grid-size border-l border-r border-[#f3f4f6]">
+                    </section> -->
+                </section>
+
+                <section>
+                    <div class="h-16 sm:h-24"></div>
+                    <div id="project" class="relative max-sm:px-4 before:content-[''] before:block before:w-screen before:h-px before:bg-[#f3f4f6] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 after:content-[''] after:block after:w-screen after:h-px after:bg-[#f3f4f6] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+                        <p class="p-2 font-eng text-xs text-sky-500 font-bold leading-none">PROJECT</p>
+                    </div>
+                    <div class="h-6"></div>
+                    <div class="relative max-sm:px-4 before:content-[''] before:block before:w-screen before:h-px before:bg-[#f3f4f6] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 after:content-[''] after:block after:w-screen after:h-px after:bg-[#f3f4f6] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+                        <h1 class="p-2 text-3xl tracking-tighter text-balance max-lg:font-medium sm:text-4xl lg:text-5xl break-keep">
+                            <span class="font-eng">PROJECTS</span> 코드로 쌓아온 기록들.
+                        </h1>
+                    </div>
+                    <div class="relative flex flex-wrap items-end max-sm:px-4 sm:h-10">
+                        <span class="px-2 text-sm text-black/40 break-keep">퍼블리싱</span>
+                        <span class="px-2 text-sm text-black/40 break-keep">인터랙션</span>
+                        <span class="px-2 text-sm text-black/40 break-keep">컴포넌트 설계</span>
+                        <span class="px-2 text-sm text-black/40 break-keep">반응형 <span class="font-eng">UI</span></span>
+                    </div>
+                    <div class="relative max-sm:px-4 before:content-[''] before:block before:w-screen before:h-px before:bg-[#f3f4f6] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 after:content-[''] after:block after:w-screen after:h-px after:bg-[#f3f4f6] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+                        <h2 class="p-2 break-keep">
+                            반응형 레이아웃, 인터랙션 구현, 컴포넌트 설계까지<br class="max-sm:hidden">
+                            화면 뒤에 담긴 고민을 함께 확인해보세요.
+                        </h2>
+                    </div>
+                    <div class="relative pt-6">
+                        <div class="pointer-events-none absolute inset-0 z-10 grid grid-cols-2 gap-10 max-md:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <div class="border-r border-gray-950/5 dark:border-white/10"></div>
+                            <div class="border-l border-gray-950/5 lg:border-x dark:border-white/10"></div>
+                            <div class="border-l border-gray-950/5 max-lg:hidden xl:border-x dark:border-white/10"></div>
+                            <div class="border-l border-gray-950/5 max-xl:hidden dark:border-white/10"></div>
+                        </div>
+
+                        <ul class="grid-li grid grid-cols-2 gap-5 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
+                            <li class="relative">
+                                <a href="https://pie-suhee.github.io/portfolio/bcd/" target="_blank">
+                                    <img src="./img/thumbnail/bcd.png" alt="bcd 코퍼레이션 썸네일">
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <a href="http://pfsb.co.kr/" target="_blank">
+                                    <img src="./img/thumbnail/pfsb.png" alt="피플퍼스트 썸네일">
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <a href="https://pie-suhee.github.io/portfolio/frisbee/" target="_blank">
+                                    <img src="./img/thumbnail/frisbee.png" alt="프리스비 썸네일">
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <a href="https://oco-seven.vercel.app/" target="_blank">
+                                    <img src="./img/thumbnail/oco.png" alt="oco 썸네일">
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <a href="https://2025pj-reactshop.vercel.app/" target="_blank">
+                                    <img src="./img/thumbnail/reactshop.png" alt="react shop 썸네일">
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <a href="https://pium.vercel.app/member/home" target="_blank">
+                                    <img src="./img/thumbnail/pium.png" alt="피움 썸네일">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section>
+                    <div class="h-16 sm:h-24"></div>
+                    <div id="skill" class="relative max-sm:px-4 before:content-[''] before:block before:w-screen before:h-px before:bg-[#f3f4f6] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 after:content-[''] after:block after:w-screen after:h-px after:bg-[#f3f4f6] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+                        <p class="p-2 font-eng text-xs text-sky-500 font-bold leading-none">SKILL</p>
+                    </div>
+                    <div class="h-6"></div>
+                    <div class="relative max-sm:px-4 before:content-[''] before:block before:w-screen before:h-px before:bg-[#f3f4f6] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 after:content-[''] after:block after:w-screen after:h-px after:bg-[#f3f4f6] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+                        <h1 class="p-2 text-3xl tracking-tighter text-balance max-lg:font-medium sm:text-4xl lg:text-5xl break-keep">
+                            <span class="font-eng">SKILLS</span> 해결될 때까지 파고드는 몰입.
+                        </h1>
+                    </div>
+                    <div class="relative flex flex-wrap items-end max-sm:px-4 sm:h-10">
+                        <span class="px-2 font-eng text-sm text-black/40 break-keep">GSAP</span>
+                        <span class="px-2 text-sm text-black/40 break-keep">애니메이션</span>
+                        <span class="px-2 font-eng text-sm text-black/40 break-keep">UI/UX</span>
+                    </div>
+                    <div class="relative max-sm:px-4 before:content-[''] before:block before:w-screen before:h-px before:bg-[#f3f4f6] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 after:content-[''] after:block after:w-screen after:h-px after:bg-[#f3f4f6] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+                        <h2 class="p-2 break-keep">
+                            작은 디테일의 차이가 완성도를 만든다고 믿습니다.
+                        </h2>
+                    </div>
+                    <div class="relative pt-6">
+                        <div class="pointer-events-none absolute inset-0 z-10 grid grid-cols-2 gap-10 max-md:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <div class="border-r border-gray-950/5 dark:border-white/10"></div>
+                            <div class="border-l border-gray-950/5 lg:border-x dark:border-white/10"></div>
+                            <div class="border-l border-gray-950/5 max-lg:hidden xl:border-x dark:border-white/10"></div>
+                            <div class="border-l border-gray-950/5 max-xl:hidden dark:border-white/10"></div>
+                        </div>
+
+                        <ul class="grid-li grid grid-cols-2 gap-5 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
+                            <li class="relative">
+                                <a href="https://motion-jet.vercel.app/hoverevent" target="_blank">
+                                    <img src="./img/thumbnail/hoverevent.png" alt="호버이벤트 썸네일">
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <a href="https://motion-jet.vercel.app/scrollevent2" target="_blank">
+                                    <img src="./img/thumbnail/scrollevent2.png" alt="스크롤이벤트 썸네일">
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <a href="https://motion-jet.vercel.app/scrollevent" target="_blank">
+                                    <img src="./img/thumbnail/scrollevent.png" alt="스크롤이벤트 썸네일">
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <a href="https://pie-suhee.github.io/portfolio/function/dragndrop" target="_blank">
+                                    <img src="./img/thumbnail/dragndrop.png" alt="드래그앤드롭 썸네일">
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <a href="https://pie-suhee.github.io/portfolio/boot/4_calendar&datepicker/" target="_blank">
+                                    <img src="./img/thumbnail/datepicker.png" alt="날짜 선택 썸네일">
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <a href="https://pie-suhee.github.io/portfolio/boot/3_star-rating/" target="_blank">
+                                    <img src="./img/thumbnail/starrating.png" alt="별점 썸네일">
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <a href="https://pie-suhee.github.io/portfolio/boot/2_analog-clock/" target="_blank">
+                                    <img src="./img/thumbnail/analogclock.png" alt="아날로그 시계 썸네일">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <div class="bg-grid-pattern bg-grid-size border-l border-r border-[#f3f4f6]"></div>
+        </section>
+    </main>
+</body>
+</html>
