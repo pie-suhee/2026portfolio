@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 },
                 onRelease: function() {
                     console.log("👐 뗌!");
-                    floating.play();
+                    // floating.play();
                     gsap.to(this.target, { scale: 1, duration: 0.2 });
                 },
                 onDrag: function() {
