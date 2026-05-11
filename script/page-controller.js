@@ -133,4 +133,20 @@ document.addEventListener("DOMContentLoaded", function() {
             ease: 'power2.inOut'
         })
     })
+
+    // 리스트 호버 이벤트
+    document.querySelectorAll(".grid-li li").forEach(li => {
+        const overlay = li.querySelector(".overlay");
+
+        // 초기 상태: 숨김
+        gsap.set(overlay, { autoAlpha: 0 });
+
+        li.addEventListener("mouseenter", () => {
+            gsap.to(overlay, { autoAlpha: 1, duration: 0.3, ease: "power2.out" });
+        });
+
+        li.addEventListener("mouseleave", () => {
+            gsap.to(overlay, { autoAlpha: 0, duration: 0.3, ease: "power2.out" });
+        });
+    });
 });

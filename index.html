@@ -24,6 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" defer></script>
 
     <script src="./script/page-controller.js" defer></script>
+    <script src="./script/data.js" defer></script>
 </head>
 <body class="max-w-screen overflow-x-hidden">
     <header class="sticky top-0 flex h-14 items-center justify-between gap-8 px-4 sm:px-6 bg-white/30 backdrop-blur-xl border-b border-[#f3f4f6] z-[10000]">
@@ -296,38 +297,7 @@
                             <div class="border-l border-gray-950/5 max-xl:hidden dark:border-white/10"></div>
                         </div>
 
-                        <ul class="grid-li grid grid-cols-2 gap-5 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
-                            <li class="relative">
-                                <a href="https://pie-suhee.github.io/portfolio/bcd/" target="_blank">
-                                    <img src="./img/thumbnail/bcd.png" alt="bcd 코퍼레이션 썸네일">
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a href="http://pfsb.co.kr/" target="_blank">
-                                    <img src="./img/thumbnail/pfsb.png" alt="피플퍼스트 썸네일">
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a href="https://pie-suhee.github.io/portfolio/frisbee/" target="_blank">
-                                    <img src="./img/thumbnail/frisbee.png" alt="프리스비 썸네일">
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a href="https://oco-seven.vercel.app/" target="_blank">
-                                    <img src="./img/thumbnail/oco.png" alt="oco 썸네일">
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a href="https://2025pj-reactshop.vercel.app/" target="_blank">
-                                    <img src="./img/thumbnail/reactshop.png" alt="react shop 썸네일">
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a href="https://pium.vercel.app/member/home" target="_blank">
-                                    <img src="./img/thumbnail/pium.png" alt="피움 썸네일">
-                                </a>
-                            </li>
-                        </ul>
+                        <ul id="project-list" class="grid-li grid grid-cols-2 gap-5 md:gap-10 lg:grid-cols-3 xl:grid-cols-4"></ul>
                     </div>
                 </section>
                 
@@ -360,43 +330,7 @@
                             <div class="border-l border-gray-950/5 max-xl:hidden dark:border-white/10"></div>
                         </div>
 
-                        <ul class="grid-li grid grid-cols-2 gap-5 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
-                            <li class="relative">
-                                <a href="https://motion-jet.vercel.app/hoverevent" target="_blank">
-                                    <img src="./img/thumbnail/hoverevent.png" alt="호버이벤트 썸네일">
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a href="https://motion-jet.vercel.app/scrollevent2" target="_blank">
-                                    <img src="./img/thumbnail/scrollevent2.png" alt="스크롤이벤트 썸네일">
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a href="https://motion-jet.vercel.app/scrollevent" target="_blank">
-                                    <img src="./img/thumbnail/scrollevent.png" alt="스크롤이벤트 썸네일">
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a href="https://pie-suhee.github.io/portfolio/function/dragndrop" target="_blank">
-                                    <img src="./img/thumbnail/dragndrop.png" alt="드래그앤드롭 썸네일">
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a href="https://pie-suhee.github.io/portfolio/boot/4_calendar&datepicker/" target="_blank">
-                                    <img src="./img/thumbnail/datepicker.png" alt="날짜 선택 썸네일">
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a href="https://pie-suhee.github.io/portfolio/boot/3_star-rating/" target="_blank">
-                                    <img src="./img/thumbnail/starrating.png" alt="별점 썸네일">
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a href="https://pie-suhee.github.io/portfolio/boot/2_analog-clock/" target="_blank">
-                                    <img src="./img/thumbnail/analogclock.png" alt="아날로그 시계 썸네일">
-                                </a>
-                            </li>
-                        </ul>
+                        <ul id="skill-list" class="grid-li grid grid-cols-2 gap-5 md:gap-10 lg:grid-cols-3 xl:grid-cols-4"></ul>
                     </div>
                 </section>
             </section>
